@@ -13,7 +13,7 @@ def roche_papier_ciseau(choix_joueur1:str, choix_joueur2:str):
         print("Vous n'avez pas entré roche, papier ou ciseau. :(")
     else:
         if choix_joueur1 == choix_joueur2:
-            return print("Partie nulle!")
+            return "Partie nulle!"
         elif (choix_joueur1 == 'roche' and choix_joueur2 == 'ciseau') or (choix_joueur1 == 'ciseau' and choix_joueur2 == 'papier') or (choix_joueur1 == 'papier' and choix_joueur2 == 'roche'):
             joueur_gagnant = "joueur1"
             arme_gagnante = choix_joueur1
@@ -21,7 +21,7 @@ def roche_papier_ciseau(choix_joueur1:str, choix_joueur2:str):
             joueur_gagnant = "joueur2"
             arme_gagnante = choix_joueur2
 
-        return print(f"\nLe gagnant est {joueur_gagnant} avec {arme_gagnante}, félicitation.")
+        return (f"Le gagnant est {joueur_gagnant} avec {arme_gagnante}, félicitation.")
 
 if __name__ == "__main__":
 
@@ -29,4 +29,4 @@ if __name__ == "__main__":
     choix1 = input("Choix du joueur 1 : ")
     choix2 = input("Choix du joueur 2 : ")
 
-    roche_papier_ciseau(choix1, choix2)
+    print(roche_papier_ciseau(choix1, choix2))
