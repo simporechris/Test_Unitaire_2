@@ -10,7 +10,7 @@ def roche_papier_ciseau(choix_joueur1:str, choix_joueur2:str):
     armes = ["roche", "papier", "ciseau"]
 
     if choix_joueur1 not in armes or choix_joueur2 not in armes:
-        print("Vous n'avez pas entré roche, papier ou ciseau. :(")
+        return "Vous n'avez pas entré roche, papier ou ciseau. :("
     else:
         if choix_joueur1 == choix_joueur2:
             return "Partie nulle!"
@@ -21,7 +21,7 @@ def roche_papier_ciseau(choix_joueur1:str, choix_joueur2:str):
             joueur_gagnant = "joueur2"
             arme_gagnante = choix_joueur2
 
-        return (f"Le gagnant est {joueur_gagnant} avec {arme_gagnante}, félicitation.")
+        return f"Le gagnant est {joueur_gagnant} avec {arme_gagnante}, félicitation."
 
 if __name__ == "__main__":
 
